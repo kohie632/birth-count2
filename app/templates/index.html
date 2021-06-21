@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="jp">
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="../static/css/index.css">
+  <script>
+    const Name = {{ name | tojson }};
+    const birm = {{ m | tojson }};
+    const bird = {{ d | tojson }};
+  </script>
+</head>
+
+<body>
+  <div class="title">
+    <h1>Birthday Counter</h1>
+    <p>Powered by KT</p>
+  </div>
+  <br>
+
+  <div class="hello">
+    <h3 id="greet">Hello!</h3>
+  </div>
+  <br>
+  <div class="maxim">
+    <p id="word">hello</p>
+    <p id="author">kohei</p>
+  </div>
+  <br>
+
+  <div class="counter">
+    <p id="bcounter" style="text-align:center"></p>
+    <p id ="bctext" style="text-align:center"></p>
+  </div>
+  <br>
+  
+  <div class="game">
+    <a href="game/ox" target="_blank">Will you play with me?</a>
+  </div>
+  <script src="../static/javascript/words.js"></script>
+  <script src="../static/javascript/index.js"></script>
+</body>
+
+</html>

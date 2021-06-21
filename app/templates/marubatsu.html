@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="jp">
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="../static/css/marubatsu.css">
+</head>
+<body>
+  <h1>○×ゲーム</h1>
+  <div class="message">
+    <p id="msg">Let's play the game!</p>
+    <a href="../test/test.html">後手　=>　先手</a>
+  </div>
+  <form>
+    <select id="sentePlayer" size="1">
+      <option value="人間">人間</option>
+      <option value="AI">AI</option>
+    </select>
+    <select id="gotePlayer" size="1">
+      <option value="AI">AI</option>
+      <option value="人間">人間</option>
+    </select>
+  </form>
+  <table class="board">
+    <tbody>
+      {% for i in range(3)%}
+      <tr>
+        {% for j in range(3)%}
+        <td id="{{ 3*i + j }}" onclick="g.proceed('{{ 3*i + j }}')">{{ 3*i + j }}</td>
+        {% endfor%}
+      </tr>
+      {% endfor%}
+    </tbody>
+  </table>
+  <br>
+  <div class="btn">
+    <button type="button" id="reset" onclick="g.reset()">リセット</button>
+  </div>
+  <br>
+  <div class="link">
+    <a href="./index.html" target="_blank">Go back to the Birthday Counter.</a>
+  </div>
+  <script src="../static/javascript/marubatsu.js"></script>
+</body>
+
+</html>

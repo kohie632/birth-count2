@@ -13,6 +13,7 @@ function greet(){
     greet = "Happy Birthday " + Name + "!"
   }else{
     console.log(now.getMonth()+1,now.getDate())
+    console.log(nowTime)
     if (5 <= nowTime && nowTime < 12 ){
       greet = "Good Morning " + Name + ".";
     }
@@ -22,11 +23,12 @@ function greet(){
     if (16 <= nowTime && nowTime < 20){
       greet = "Good Evening " + Name + ".";
     }
-    if (20 <= nowTime){
+    if (20 <= nowTime || nowTime < 5){
       greet = "Good Night " + Name + ".";
     }
-    
+    console.log("greet",greet)
   }
+  console.log("greet",greet)
   document.getElementById("greet").textContent = greet;
   setTimeout(countdown,1000*60);//1分ごとに繰り返す
 }
